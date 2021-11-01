@@ -12,10 +12,10 @@ clean: ## Remove general artifact files
 	find . -name '.pytest_cache' -type d | xargs rm -rf
 	find . -name '__pycache__' -type d | xargs rm -rf
 	find . -name '.ipynb_checkpoints' -type d | xargs rm -rf
-	if [[ ! -d "venv" ]]; then \
+	if [[ -d "venv/" ]]; then \
 		rm -rf venv; \
 	fi
-	if [[ ! -f "requirements.txt" ]]; then \
+	if [[ -f "requirements.txt" ]]; then \
 		rm -r requirements.txt; \
 	fi
 
